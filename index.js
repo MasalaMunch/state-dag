@@ -3,6 +3,7 @@
 const assert = require(`assert`);
 
 const IsNully = require(`is-nil`);
+const IsString = require(`is-string`);
 
 const defIn = require(`@masalamunch/def-in`);
 
@@ -31,6 +32,8 @@ module.exports = () => {
                 if (inputNames) {
                     assert(inputNames instanceof Array);
                     inputNames.forEach((otherName) => 
+                        assert(IsString(otherName)));
+                    inputNames.forEach((otherName) => 
                         assert(nameInterfaces.hasOwnProperty(otherName)));
                 }
 
@@ -40,7 +43,8 @@ module.exports = () => {
 
                 Object.defineProperty(this_, name, {
                     get: () => nameInterfaces[name],
-                    set: () => assert(false), // mutation must happen via this_[name].val
+                    set: () => assert(false), 
+                    //^ mutation must happen via this_[name].val
                     });
 
                 nameInterfaces[name] = obj[name];

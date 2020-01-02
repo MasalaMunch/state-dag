@@ -8,6 +8,7 @@
   "license": "ISC",
   "dependencies": {
     "@masalamunch/def-in": "1.0.0",
-    "is-nil": "1.0.1"
+    "is-nil": "1.0.1",
+    "is-string": "1.0.5"
   }
 }
