@@ -1,0 +1,13 @@
+{
+  "name": "@masalamunch/state-dag",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MasalaMunch/state-dag.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@masalamunch/def-in": "1.0.0",
+    "is-nil": "1.0.1"
+  }
+}
